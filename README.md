@@ -17,7 +17,7 @@ This package requires PHP 8.0 and Laravel 8.0 or higher.
 You can install the package via composer:
 
 ```bash
-composer require brainstud/file-vault
+composer require 310k/file-vault
 ```
 
 ## Usage
