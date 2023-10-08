@@ -1,9 +1,9 @@
 <?php
 
-namespace Brainstud\FileVault\Tests;
+namespace K310\FileVault\Tests;
 
-use Brainstud\FileVault\Facades\FileVault;
-use Brainstud\FileVault\FileVaultServiceProvider;
+use K310\FileVault\Facades\FileVault;
+use K310\FileVault\FileVaultServiceProvider;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Storage;
 use Orchestra\Testbench\TestCase;
@@ -61,7 +61,7 @@ class FileVaultTest extends TestCase
     protected function generateRandomKey()
     {
         return 'base64:'.base64_encode(
-            \Brainstud\FileVault\FileVault::generateKey()
+            \K310\FileVault\FileVault::generateKey()
         );
     }
 

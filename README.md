@@ -1,8 +1,8 @@
 # File encryption / decryption in Laravel
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/brainstud/file-vault.svg?style=flat-square)](https://packagist.org/packages/brainstud/file-vault)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/310k/file-vault.svg?style=flat-square)](https://packagist.org/packages/310k/file-vault)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Total Downloads](https://img.shields.io/packagist/dt/brainstud/file-vault.svg?style=flat-square)](https://packagist.org/packages/brainstud/file-vault)
+[![Total Downloads](https://img.shields.io/packagist/dt/310k/file-vault.svg?style=flat-square)](https://packagist.org/packages/310k/file-vault)
 
 With this package, you can encrypt and decrypt files of any size in your Laravel project. This package uses streams and [CBC encryption](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Cipher_Block_Chaining_(CBC)), encrypting / decrypting a segment of data at a time.
 
@@ -33,7 +33,7 @@ This package will automatically register a facade called `FileVault`. The `FileV
 If you want to change the default `disk` or change the `key`/`cipher` used for encryption, you can publish the config file:
 
 ```
-php artisan vendor:publish --provider="Brainstud\FileVault\FileVaultServiceProvider"
+php artisan vendor:publish --provider="K310\FileVault\FileVaultServiceProvider"
 ```
 
 This is the contents of the published file:
@@ -190,11 +190,11 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ### Security
 
-If you discover any security related issues, please email dev@brainstud.com instead of using the issue tracker.
+If you discover any security related issues, please email support@310k.ch instead of using the issue tracker.
 
 ## Credits
 
-- [Brainstud](https://github.com/brainstudnl)
+- [310K](https://github.com/310k)
 - [Costin Soare](https://github.com/soarecostin)
 
 ## License
