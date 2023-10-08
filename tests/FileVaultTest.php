@@ -2,10 +2,10 @@
 
 namespace K310\FileVault\Tests;
 
-use K310\FileVault\Facades\FileVault;
-use K310\FileVault\FileVaultServiceProvider;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Storage;
+use K310\FileVault\Facades\FileVault;
+use K310\FileVault\FileVaultServiceProvider;
 use Orchestra\Testbench\TestCase;
 
 class FileVaultTest extends TestCase
