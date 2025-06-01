@@ -177,19 +177,15 @@ class FileEncrypter
         // Définir un umask temporaire pour obtenir 0660
         $oldUmask = umask(0017); // 0666 - 0017 = 0660
 
-        try
-        {
+        try {
             $fpOut = fopen($destPath, 'w');
 
-            if($fpOut === false)
-            {
+            if ($fpOut === false) {
                 throw new Exception('Cannot open file for writing');
             }
 
             return $fpOut;
-        }
-        finally
-        {
+        } finally {
             // Restaurer l'umask initial quoi qu'il arrive
             umask($oldUmask);
         }
