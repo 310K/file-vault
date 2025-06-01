@@ -174,25 +174,14 @@ class FileEncrypter
      */
     protected function openDestFile($destPath)
     {
-        // Définir un umask temporaire pour obtenir 0660
-        $oldUmask = umask(0017); // 0666 - 0017 = 0660
+        $fpOut = fopen($destPath, 'w');
 
-        try
+        if ($fpOut === false)
         {
-            $fpOut = fopen($destPath, 'w');
-
-            if($fpOut === false)
-            {
-                throw new Exception('Cannot open file for writing');
-            }
-
-            return $fpOut;
+            throw new Exception('Cannot open file for writing');
         }
-        finally
-        {
-            // Restaurer l'umask initial quoi qu'il arrive
-            umask($oldUmask);
-        }
+
+        chmod($destPath, 0660); // Mandatory to set correct Linux permissions
 
         return $fpOut;
     }
