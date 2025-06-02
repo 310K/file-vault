@@ -176,13 +176,11 @@ class FileEncrypter
     {
         $fpOut = fopen($destPath, 'w');
 
-        if ($fpOut === false)
-        {
+        if ($fpOut === false) {
             throw new Exception('Cannot open file for writing');
         }
 
-        if (is_file($destPath)) // Check that this is it a file and not a resource
-        {
+        if (is_file($destPath)) { // Check that this is it a file and not a resource
             chmod($destPath, 0660); // Mandatory to set correct Linux permissions
         }
 
