@@ -181,7 +181,7 @@ class FileEncrypter
             throw new Exception('Cannot open file for writing');
         }
 
-        chmod($destPath, 0660); // Mandatory to set correct Linux permissions
+        //chmod($destPath, 0660); // Mandatory to set correct Linux permissions
 
         return $fpOut;
     }
