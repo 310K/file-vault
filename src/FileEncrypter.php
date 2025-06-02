@@ -176,8 +176,7 @@ class FileEncrypter
     {
         $fpOut = fopen($destPath, 'w');
 
-        if ($fpOut === false)
-        {
+        if ($fpOut === false) {
             throw new Exception('Cannot open file for writing');
         }
 
